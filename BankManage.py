@@ -64,6 +64,18 @@ def show_card_type(account_id):
         print("User uses both Debit and Credit Card.")
     else:
         print("User has not chosen any card type.")
+def loan(income,loanamount):
+    if income<300000:
+        check_balance=check_balance+0
+        print("Loan can't be granted to you ")
+    elif income>500000:
+        check_balance=check_balance+(loanamount/2)
+        print("Yoyr Loan is granted But upto 50% due to low income and low credit score")
+    elif income>10000000:
+        print("Loan Granted ")
+    else:
+        print("No Loan can't be granted ")
+        
 
 def main():
     while True:
@@ -75,7 +87,8 @@ def main():
         print("6. Show Number of Users")
         print("7. Choose Account Type")
         print("8. Show Card Type")
-        print("9. Exit")
+        print("9.Loan")
+        print("10. Exit")
         choice = input("Enter your choice: ")
 
         if choice == "1":
@@ -105,7 +118,11 @@ def main():
         elif choice == "8":
             account_id = int(input("Enter account ID: "))
             show_card_type(account_id)
-        elif choice == "9":
+        elif choice =="9":
+            income=float(input("Enter your annual income"))
+            loanamount=float(input("enter the Loan amount you want "))
+            loan(income,loanamount)
+        elif choice == "10":
             print("Thank you for using our services!")
             break
         else:
