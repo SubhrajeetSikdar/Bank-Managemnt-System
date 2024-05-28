@@ -56,11 +56,11 @@ def choose_account_type(account_id, account_type):
 def show_card_type(account_id):
     cursor.execute("SELECT account_type FROM accounts WHERE id = %s", (account_id,))
     card_type = cursor.fetchone()[0]
-    if card_type == "debit":
+    if card_type=="debit":
         print("User uses Debit Card.")
-    elif card_type == "credit":
+    elif card_type=="credit":
         print("User uses Credit Card.")
-    elif card_type == "both":
+    elif card_type=="both":
         print("User uses both Debit and Credit Card.")
     else:
         print("User has not chosen any card type.")
