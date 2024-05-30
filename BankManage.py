@@ -87,12 +87,12 @@ def main():
         print("6. Show Number of Users")
         print("7. Choose Account Type")
         print("8. Show Card Type")
-        print("9.Loan")
+        print("9. Loan")
         print("10. Exit")
         choice = input("Enter your choice: ")
 
-        if choice == "1":
-            name = input("Enter your name: ")
+        if choice=="1":
+            name=input("Enter your name: ")
             initial_balance = float(input("Enter initial balance: "))
             account_type = input("Choose account type (debit, credit, or both): ")
             create_account(name, initial_balance, account_type)
