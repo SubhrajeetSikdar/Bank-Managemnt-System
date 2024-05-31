@@ -1,5 +1,4 @@
 import mysql.connector
-
 db = mysql.connector.connect(
     host="localhost",
     user="your_username",
@@ -7,17 +6,15 @@ db = mysql.connector.connect(
     database="bank"
 )
 cursor = db.cursor()
-
 def create_account(name, balance, account_type):
     sql = "INSERT INTO accounts (name, balance, account_type) VALUES (%s, %s, %s)"
     cursor.execute(sql, (name, balance, account_type))
     db.commit()
     print("Account created successfully!")
-
 def deposit(account_id, amount):
     cursor.execute("SELECT balance FROM accounts WHERE id = %s", (account_id,))
     current_balance = cursor.fetchone()[0]
-    new_balance = current_balance + amount
+    new_balance=current_balance+amount
     cursor.execute("UPDATE accounts SET balance = %s WHERE id = %s", (new_balance, account_id))
     db.commit()
     print("Deposit successful. New balance:", new_balance)
