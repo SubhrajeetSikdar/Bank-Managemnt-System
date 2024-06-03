@@ -40,9 +40,9 @@ You can fork this repository, make changes, and then create a pull request. Your
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Author
+## Subhrajeet Sikdar
 
-[Your Name](https://github.com/yourusername)
+[Your Name](https://github.com/SubhrajeetSikdar)
 
 ## Acknowledgements
 
